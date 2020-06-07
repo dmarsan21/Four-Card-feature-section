@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+    /* background-color: #fafafa; */
+}
+
+.container {
+    width: 1140px;
+    height: 750px;
+    margin: 50px auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.header h2 {
+    font-weight: 200;
+    font-size: 32px;
+    margin: 0;
+    margin-top: 45px;
+    color: var(--Very-Dark-Blue);
+}
+
+.header h1 {
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1.3px;
+    color: var(--Very-Dark-Blue);
+}
+
+.header p {
+    padding-top: 1rem;
+    color: var(--Grayish-Blue);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    grid-column-gap: 2.6%;
+}
+
+
+/* card supervisor */
+
+.supervisor {
+    grid-column: 1;
+    grid-row: 2/4;
+    background-color: white;
+    padding: 25px;
+    height: 235px;
+    border-top: 5px solid var(--Cyan);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px #333;
+}
+
+.supervisor h3 {
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.supervisor p {
+    color: var(--Grayish-Blue);
+}
+
+.supervisor img {
+    padding-top: 20px;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+
+/* card builder */
+
+.builder {
+    grid-column: 2;
+    grid-row: 1/3;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    height: 235px;
+    border-top: 5px solid var(--Red);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px #333;
+}
+
+.builder h3 {
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.builder p {
+    color: var(--Grayish-Blue);
+}
+
+.builder img {
+    padding-top: 20px;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+
+/* card karma */
+
+.karma {
+    grid-column: 2;
+    grid-row: 3/5;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    height: 235px;
+    border-top: 5px solid var(--Orange);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px #333;
+}
+
+.karma h3 {
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.karma p {
+    color: var(--Grayish-Blue);
+}
+
+.karma img {
+    padding-top: 20px;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+
+/* card calculator */
+
+.calculator {
+    grid-column: 3;
+    grid-row: 2/4;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    height: 235px;
+    border-top: 5px solid var(--Blue);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px #333;
+}
+
+.calculator h3 {
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.calculator p {
+    color: var(--Grayish-Blue);
+}
+
+.calculator img {
+    padding-top: 20px;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+
+/* version mobile */
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    .header h2 {
+        font-size: 25px;
+    }
+    .header h1 {
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+    .header p {
+        text-align: center;
+        font-size: .8rem;
+    }
+    .cards {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: auto;
+        height: auto;
+        width: auto;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    /* card supervisor */
+    .supervisor {
+        grid-row: 1;
+        grid-column: 1;
+        margin-bottom: 30px;
+    }
+    /* card builder */
+    .builder {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    /* card karma */
+    .karma {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    /* card calculator */
+    .calculator {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    /* footer */
+    footer {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+
+/* attribution */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
